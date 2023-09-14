@@ -68,7 +68,7 @@ struct HomeView: View {
                     }
 
                     TabBar {
-                        
+                          
                     }.offset(y: 115 * bottomSheetTranslationProrated)
 
                 }

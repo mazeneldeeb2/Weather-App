@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ForcastView: View {
+    @State var selection: Int = 0
     var bottomSheetTranslationProrated: CGFloat = 1
     var body: some View {
         ScrollView{
-            
+            VStack(spacing: 20) {
+                SegmentedControl(selection: $selection)
+            }
         }
         .backgroundBlur(radius: 25, opaque: true)
         .background(Color.bottomSheetBackground)
@@ -37,5 +40,7 @@ struct ForcastView: View {
 struct ForcastView_Previews: PreviewProvider {
     static var previews: some View {
         ForcastView()
+            .background(Color.background)
+            .preferredColorScheme(.dark)
     }
 }
